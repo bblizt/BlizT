@@ -1,9 +1,8 @@
 func findCelestialWithHigherFleetValue() {
-    celestials = GetCachedCelestials()
     fleets, _ = GetFleets()
     master = nil
     maxVal = 0
-    for celestial in celestials {
+    for celestial in GetCachedCelestials() {
         ships, _ = celestial.GetShips()
         value = ships.FleetValue()
         coord = celestial.GetCoordinate()
